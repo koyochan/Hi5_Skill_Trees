@@ -1,16 +1,23 @@
+import React from 'react';
+import {
+  SkillTreeGroup,
+  SkillTree,
+  SkillProvider,
+} from 'beautiful-skill-tree';
+
 const data_of_lego = [
   {
     id: 'Hello-word',
     title: 'Hello World',
     tooltip: {
-      content: 'このノードは最上位レベルで、アンロックされてクリック可能です。',
+      content: '最上位ノード',
     },
     children: [
       {
         id: 'hello-sun',
         title: 'Hello Sun',
         tooltip: {
-          content: 'このノードは上位ノードの子で、親が選択状態でないとロックされます。',
+          content: '小ノード',
         },
         children: [
           {
@@ -19,16 +26,15 @@ const data_of_lego = [
             tooltip: {
               content: 'こんにちは、ゆーし！',
             },
-            children: [
-              {
-                id: 'hello-minako',
-                title: 'Hello Minako',
-                tooltip: {
-                  content: 'こんにちは、みなこさん！',
-                },
-                children: []  // 空の子ノード配列を追加
-              }
-            ],
+            children: []
+          },
+          {
+            id: 'hello-minako',
+            title: 'Hello Minako',
+            tooltip: {
+              content: 'こんにちは、みなこさん！',
+            },
+            children: []
           }
         ],
       },
@@ -36,7 +42,7 @@ const data_of_lego = [
         id: 'hello-stars',
         title: 'Hello Stars',
         tooltip: {
-          content: 'このツールは自動的にレイアウトを管理します。だからこれをBeautiful Skill Treeと呼びます。',
+          content: '小ノード',
         },
         children: [
           {
@@ -45,16 +51,15 @@ const data_of_lego = [
             tooltip: {
               content: 'こんにちは、大海さん！',
             },
-            children: [
-              {
-                id: 'hello-saika',
-                title: 'Hello Saika',
-                tooltip: {
-                  content: 'こんにちは、さいかさん！',
-                },
-                children: []  // 空の子ノード配列を追加
-              }
-            ],
+            children: []
+          },
+          {
+            id: 'hello-saika',
+            title: 'Hello Saika',
+            tooltip: {
+              content: 'こんにちは、さいかさん！',
+            },
+            children: []
           }
         ],
       },
@@ -69,8 +74,8 @@ const MySkillTreeComponent = () => {
       <SkillTreeGroup>
         {({ skillCount }) => (
           <SkillTree
-            treeId=""
-            title="Lego Education"
+            treeId="prototype of skill trees"
+            title="試作用スキルツリー"
             data={data_of_lego}
             collapsible
             description="Lego Education用のスキルツリー"
