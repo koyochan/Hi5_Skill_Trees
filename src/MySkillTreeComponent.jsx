@@ -1,10 +1,3 @@
-import React from 'react';
-import {
-  SkillTreeGroup,
-  SkillTree,
-  SkillProvider,
-} from 'beautiful-skill-tree';
-
 const data_of_lego = [
   {
     id: 'Hello-word',
@@ -33,6 +26,7 @@ const data_of_lego = [
                 tooltip: {
                   content: 'こんにちは、みなこさん！',
                 },
+                children: []  // 空の子ノード配列を追加
               }
             ],
           }
@@ -58,6 +52,7 @@ const data_of_lego = [
                 tooltip: {
                   content: 'こんにちは、さいかさん！',
                 },
+                children: []  // 空の子ノード配列を追加
               }
             ],
           }
@@ -66,6 +61,7 @@ const data_of_lego = [
     ],
   },
 ];
+
 
 const MySkillTreeComponent = () => {
   return (
